@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Asmita Timalsena</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Istok Web', sans-serif;
+            background-color: lightslategray;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+
+
+        .project-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #7fb4cf;
+            padding: 30px;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .project-box {
+            transition: 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+
+
+        .project-text {
+            flex: 2;
+        }
+
+        .project-text h2 {
+            margin-top: 0;
+        }
+
+
+
+        .project-image {
+            flex: 1;
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1 class="page-title">My Projects</h1>
+
+        <div class="project-box">
+
+            <div class="project-text">
+                <h2>Chitto Order</h2>
+                <p>
+                    Chitto Order is a web-based system that allows customers to scan a QR code
+                    and access a restaurant menu directly in their browser without installing
+                    any application. Customers can place orders with quantity selection,
+                    remarks, and automatic total calculation.
+                </p>
+
+                <p>
+                    Staff are provided with an interface to efficiently manage orders,
+                    including editing and deleting orders. Built using Flask, MySQL,
+                    HTML, JavaScript and Tailwind CSS, the system improves both
+                    customer experience and restaurant workflow.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="images/chitto-order.png" alt="Chitto Order" height="500px">
+            </div>
+
+        </div>
+
+
+
+        <div class="project-box">
+
+            <div class="project-text">
+                <h2>Optimizing Traffic Flow</h2>
+
+                <p>
+                    This research-based simulation project explores the impact of
+                    introducing dedicated motorcycle lanes in Kathmandu.
+                </p>
+
+                <p>
+                    Built using Python and Pygame, the project compares two
+                    scenarios: the current shared-lane system and a proposed
+                    dedicated-lane system.
+                </p>
+
+                <p>
+                    Simulation results showed improved traffic flow,
+                    increased average speeds, reduced congestion,
+                    and fewer collision risks when motorcycle lanes
+                    were separated.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="images/traffic-simulation.png" alt="Traffic Simulation">
+            </div>
+
+        </div>
+
+
+        <div class="project-box">
+
+            <div class="project-text">
+                <h2>Selilac E-Commerce Website</h2>
+
+                <p>
+                    Selilac is an online plant-selling platform designed to make
+                    buying and selling indoor and outdoor plants easier and more
+                    accessible.
+                </p>
+
+                <p>
+                    Built using HTML, CSS, JavaScript, jQuery, and PHP,
+                    the platform focuses on simplicity, efficient transactions,
+                    and promoting gardening culture.
+                </p>
+            </div>
+
+            <div class="project-image">
+                <img src="images/selilac.png" alt="Selilac Website">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
