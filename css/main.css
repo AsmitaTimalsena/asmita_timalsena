@@ -1,3 +1,8 @@
+html{
+scroll-behavior:smooth;
+scroll-padding-top: 120px;
+}
+
 body {
     font-family: 'Istok Web', sans-serif;
     margin: 0;
@@ -10,6 +15,9 @@ body {
 }
 
 .dark-mode #skills {
+    color: #fff;
+}
+.dark-mode #projects {
     color: #fff;
 }
 
@@ -42,32 +50,10 @@ body {
     border: 1px solid rgb(223, 212, 208);
     background-color: lightcyan;
     box-shadow: 5px 5px 10px lightcyan;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-btn {
-    display: inline-block;
-    background: #e5e5e5;
-    padding: 8px 18px;
-    margin-left: 12px;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.nav-btn:hover {
-    background: #9ac8d4;
-}
-
-
 .header-inner {
     max-width: 1100px;
     margin: auto;
@@ -85,21 +71,43 @@ body {
     margin: 5px 0 0 0;
 }
 
-.header-right a {
-    background: #e5e5e5;
-    padding: 8px 18px;
-    margin-left: 12px;
-    text-decoration: none;
-    color: black;
-    border-radius: 3px;
-    font-size: 14px;
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: lightslategrey; 
+}
+
+.dark-mode-img {
+    width: 50px;
+    height: 50px; 
+    cursor: pointer;
+}
+
+section::before {
+    content: "";
+    display: block;
+    height: 100px; 
+    margin-top: -100px;
+    visibility: hidden;
+}
 
 .about {
     width: 100%;
     padding: 40px 0;
+    
 }
 
 .about-inner {
@@ -113,6 +121,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.about-inner:hover {
+    box-shadow: 10px 10px 20px lightcyan;
 }
 
 .about-text {
@@ -181,25 +193,160 @@ body {
 .section-buttons button:hover {
     background: #5c99b7;
 }
+.projects-preview h2 {
+    margin-bottom: 40px;
+    text-align: left;
+}
+.projects-preview {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
 
 
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+.project-card {
+    background: #7fb4cf;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 200px; 
+    object-fit: cover;  
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.project-card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.project-card p {
+    margin: 0 0 10px 0;
+}
+
+.view-more {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.view-more:hover {
+    background-color: #555;
+}
 
 .footer {
     width: 100%;
     border: 1px solid rgb(223, 212, 208);
     background-color: lightcyan;
     box-shadow: 0 0 10px lightcyan;
-    text-align: center;
-    padding: 25px 0;
+
+    display: flex;
+    justify-content: center;   
+    align-items: flex-start;
+
+    gap: 200px;              
+
+    padding: 25px 40px;
+}
+
+.footer-left{
+    max-width:300px;
+    text-align:left;
+}
+
+
+.contact-section{
+    padding:10px 20px;
+    margin-top:0;
+    text-align:center;
+}
+.contact-section h1{
+    font-size:22px;
+    margin-top:0;
+}
+.contact-box{
+    max-width:800px;
+    width: 100%;
+    margin: auto;
+    background:#7fb4cf;
+    padding:30px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:none;
+}
+
+.contact-box textarea{
+    height:120px;
+}
+
+#sendButton{
+    background:lightcyan;
+    border:none;
+    padding:10px 25px;
+    cursor:pointer;
+}
+
+#sendButton:hover{
+    background:lightslategray;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+}
+
+.success{
+    color:green;
 }
 
 .socials {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
 }
 
-.socials a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.contact-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-item a img {
+    width: 80px;
+    height: auto;
 }
