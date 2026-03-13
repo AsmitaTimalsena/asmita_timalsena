@@ -4,7 +4,6 @@
 
 html,body{
     width: 100%;
-    overflow-x: hidden;
 }
 
 html{
@@ -64,9 +63,11 @@ img{
     border: 1px solid rgb(223, 212, 208);
     background-color: lightcyan;
     box-shadow: 5px 5px 10px lightcyan;
-    position: sticky;
+    position: -webkit-sticky;
+    position:sticky;
     top: 0;
     z-index: 1000;
+
 }
 .header-inner {
     max-width: 1100px;
