@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 html{
 scroll-behavior:smooth;
 scroll-padding-top: 120px;
@@ -351,6 +356,8 @@ section::before {
 
 .contact-item {
     display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
     align-items: center;
     gap: 15px; 
 }
@@ -373,15 +380,22 @@ section::before {
 .header-inner{
     flex-direction: column;
     text-align:center;
+    align-items:center;
+    padding:15px;
 }
 
 .header-right{
     flex-wrap: wrap;
     justify-content:center;
+    gap:10px;
 }
 
 .nav-link{
     font-size:16px;
+}
+.dark-mode-img{
+    width:35px;
+    height:35px;
 }
 
 
@@ -421,8 +435,9 @@ section::before {
 .footer{
     flex-direction: column;
     align-items:center;
-    gap:40px;
+    gap:30px;
     text-align:center;
+    padding: 20px;
 }
 
 .footer-left{
@@ -430,6 +445,7 @@ section::before {
 }
 
 .contact-box{
+    max-width: 100%;
     padding:20px;
 }
 
