@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 html{
 scroll-behavior:smooth;
 scroll-padding-top: 120px;
@@ -7,6 +11,11 @@ body {
     font-family: 'Istok Web', sans-serif;
     margin: 0;
     background-color: lightslategray;
+    overflow-x:hidden;
+}
+img{
+    max-width:100%;
+    height:auto;
 }
 
 .dark-mode {
@@ -61,6 +70,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .header-left h1 {
@@ -75,6 +86,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 
@@ -119,6 +131,7 @@ section::before {
 
     padding: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -269,13 +282,14 @@ section::before {
     justify-content: center;   
     align-items: flex-start;
 
-    gap: 200px;              
+    gap: 60px;  
+    flex-wrap: wrap;            
 
     padding: 25px 40px;
 }
 
 .footer-left{
-    max-width:300px;
+    max-width:400px;
     text-align:left;
 }
 
@@ -290,7 +304,7 @@ section::before {
     margin-top:0;
 }
 .contact-box{
-    max-width:800px;
+    max-width:500px;
     width: 100%;
     margin: auto;
     background:#7fb4cf;
@@ -349,4 +363,74 @@ section::before {
 .contact-item a img {
     width: 80px;
     height: auto;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px){
+
+
+.header-inner{
+    flex-direction: column;
+    text-align:center;
+}
+
+.header-right{
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.nav-link{
+    font-size:16px;
+}
+
+
+.about-inner{
+    flex-direction: column;
+    text-align:center;
+    gap:20px;
+}
+
+.about-text{
+    width:100%;
+}
+
+.about-image img{
+    width:180px;
+    height:180px;
+}
+
+
+
+.skills-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.skills-grid img{
+    width:60px;
+}
+
+
+
+.projects-grid{
+    grid-template-columns: 1fr;
+}
+
+
+
+.footer{
+    flex-direction: column;
+    align-items:center;
+    gap:40px;
+    text-align:center;
+}
+
+.footer-left{
+    max-width:100%;
+}
+
+.contact-box{
+    padding:20px;
+}
+
 }
