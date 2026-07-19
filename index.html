@@ -53,13 +53,14 @@
                     <p>
                         I’m an enthusiastic software developer specializing in building responsive
                         and scalable web applications. I work with HTML, CSS,
-                        JavaScript, PHP, Python, and MySQL to create complete,
+                        JavaScript, React, PHP, Python(Django), and MySQL(&Postgres) to create complete,
                         efficient solutions from front end to back end.
                     </p>
 
+                    
                     <p>
                         I focus on clean code, problem-solving, and delivering
-                        real value through reliable and user-friendly systems.
+                        real value through TDD + CICD approach to ensure reliable and user-friendly systems.
                     </p>
                 </div>
 
@@ -79,10 +80,15 @@
                 <img src="images/html.png">
                 <img src="images/css.png">
                 <img src="images/js.png">
+                <img src="images/react.png">
                 <img src="images/php.png">
                 <img src="images/sql.png">
+                <img src="images/postgre.png">
                 <img src="images/python.png">
                 <img src="images/github.png">
+                <img src="images/postman.png">
+                <img src="images/django.png">
+                <img src="images/PyCharm.png">
 
             </div>
 
@@ -92,30 +98,70 @@
     
         <h2 id="projects">My Projects</h2>
 
-    <div class="projects-grid">
+    <div class="projects-wrapper">
+
+    <button class="scroll-btn left" onclick="scrollProjects(-1)">
+        &#10094;
+    </button>
+
+    <div class="projects-grid" id="projectsGrid">
 
         <div class="project-card">
-            <img src="images/chitto-card.png" alt="Chitto Order">
+            <img src="images/ajaisikam.png" alt="">
+            <h3>AjaiSikam: Mentoring Platform</h3>
+            <p>A web-based mentoring system that matches post questions with industry experts using AI.</p>
+            <a href="projects.html#ajaisikam" class="view-more">View More</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/quote-companion.png" alt="">
+            <h3>Quote Companion</h3>
+            <p>A web-based quote generation system based on user moods.</p>
+            <a href="projects.html#quote-companion" class="view-more">View More</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/taxation-system.png" alt="">
+            <h3>Taxation System Nepal</h3>
+            <p>A digital tax management system.</p>
+            <a href="projects.html#taxation" class="view-more">View More</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/sc-taker.png" alt="">
+            <h3>Auto Screenshot Tool</h3>
+            <p>Automatically captures screenshots at intervals.</p>
+            <a href="projects.html#sc-taker" class="view-more">View More</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/chitto-card.png" alt="">
             <h3>Chitto Order</h3>
-            <p>A web-based system to scan QR codes and place restaurant orders efficiently.</p>
+            <p>Restaurant QR ordering system.</p>
             <a href="projects.html#chitto-order" class="view-more">View More</a>
         </div>
 
         <div class="project-card">
-            <img src="images/traffic-simulation.png" alt="Traffic Simulation">
-            <h3>Optimizing Traffic Flow</h3>
-            <p>Simulation project analyzing dedicated motorcycle lanes in Kathmandu.</p>
+            <img src="images/traffic-simulation.png" alt="">
+            <h3>Traffic Simulation</h3>
+            <p>Motorcycle lane simulation.</p>
             <a href="projects.html#traffic-simulation" class="view-more">View More</a>
         </div>
 
         <div class="project-card">
-            <img src="images/selilac-card.png" alt="Selilac Website">
-            <h3>Selilac E-Commerce Website</h3>
-            <p>Online platform to buy and sell indoor and outdoor plants easily.</p>
+            <img src="images/selilac-card.png" alt="">
+            <h3>Selilac Website</h3>
+            <p>E-commerce website for plants.</p>
             <a href="projects.html#selilac" class="view-more">View More</a>
         </div>
 
     </div>
+
+    <button class="scroll-btn right" onclick="scrollProjects(1)">
+        &#10095;
+    </button>
+
+</div>
 </section>
 
 
@@ -276,6 +322,19 @@
                 });
 
     });
+
+    function scrollProjects(direction){
+
+    const container = document.getElementById("projectsGrid");
+
+    const amount = 340; // card width + gap
+
+    container.scrollBy({
+        left: direction * amount,
+        behavior: "smooth"
+    });
+
+}
 
 
 </script>
